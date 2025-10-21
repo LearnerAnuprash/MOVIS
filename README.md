@@ -1,2 +1,3 @@
 # MOVIS
-Explore trending movies and more on MOVIS !!
+
+**Explore trending movies and more on MOVIS !!**
