@@ -3,11 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking stylesheets-->
+    <link rel="stylesheet" href="./styles/nav-styles.css" />
+    <link rel="stylesheet" href="./styles/main-styles.css" />
+
+    <!-- Linking font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+
     <title>MOVIS</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <h1>MOVIS</h1>
+    <!-- =================================================
+        |                  NAVIGATION BAR                 |
+        ===================================================-->
+    <nav class="nav-bar-itself">
+      <!-- =================================================-->
+
+      <!-- When styling in css , could do '.brand' simply to target this -->
+      <div class="element-container brand">
+        <a href="#"><h1>MOVIS</h1></a>
+      </div>
+
+      <!-- =================================================-->
+
+      <div class="element-container home">
+        <img src="../assets/black-home.png" alt="home" class="nav-icon" />
+        <a href="#" class="nav-element">Home</a>
+      </div>
+
+      <!-- =================================================-->
+
+      <div class="element-container movies">
+        <img src="../assets/black-movies.png" alt="movies" class="nav-icon" />
+        <a href="#" class="nav-element">Movies</a>
+      </div>
+
+      <!-- =================================================-->
+
+      <div class="element-container tvshow">
+        <img src="../assets/black-tvshow.png" alt="tvshow" class="nav-icon" />
+        <a href="#" class="nav-element">TV shows</a>
+      </div>
+
+      <!-- =================================================-->
+
+      <div class="element-container my-stuff">
+        <a href="#" class="nav-element">My Stuff</a>
+        <img src="../assets/arrow.png" alt="dropdown" class="nav-icon" />
+      </div>
+
+      <!-- =================================================-->
+
+      <form action="submit" class="element-container">
+        <input type="text" id="input-box" />
+        <button class="search-container-button">
+          <img src="../assets/black-search.png" alt="search" class="nav-icon" />
+        </button>
+      </form>
+
+      <!-- =================================================-->
+
+      <div class="element-container">
+        <img src="../assets/9dots.png" alt="genre" class="nav-icon" />
+      </div>
+
+      <!-- =================================================-->
+
+      <div class="element-container default">
+        <img
+          src="../assets/default-profile-picture.png"
+          alt="default"
+          class="nav-icon"
+        />
+      </div>
+
+      <!-- =================================================-->
+
+      <div class="element-container three-dot">
+        <button class="three-dot">
+          <img src="../assets/ellipsis.png" alt="three-dot" class="nav-icon" />
+        </button>
+      </div>
+    </nav>
+
+    <!-- =================================================
+        |                   MAIN BODY                    |
+        ===================================================-->
+
+    <div class="slides-container"></div>
+
+    <script src="./main.js"></script>
   </body>
-  <script src="../dist/scripts/main.js"></script>
 </html>

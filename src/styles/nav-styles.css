@@ -1,0 +1,277 @@
+/* Remove all default styling from the page */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove text-decoration from anchor tags */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Targeted images of navigation bar only /- */
+.element-container img {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+/* Targeted whole navigation bar including images+text */
+.nav-bar-itself {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(253, 253, 253);
+  font-size: 1.3rem;
+  font-family: Helvetica, sans-serif;
+  width: 100%;
+}
+
+/* Targeted each individual (img+text) for aligning text vertically to images  */
+.element-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Targeted each text element of navigation bar */
+.nav-element {
+  padding-left: 0.8rem;
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Targeted button tag that wraps the search image */
+.search-container-button {
+  border-radius: 1rem;
+  border: none;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+/* Targeted individual icons */
+
+/*===========================*/
+img[alt="movies"] {
+  width: 2.6rem;
+  height: 2.5rem;
+  margin-bottom: 0.18rem;
+}
+/*===========================*/
+
+/*===========================*/
+img[alt="tvshow"] {
+  width: 3.3rem;
+  height: 3.4rem;
+  margin-bottom: 0.3rem;
+}
+/*===========================*/
+
+/*===========================*/
+img[alt="dropdown"] {
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(0.5turn);
+  margin-left: 0.5rem;
+}
+/*===========================*/
+
+/*===========================*/
+img[alt="genre"] {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+/*===========================*/
+
+/*===========================*/
+img[alt="default"] {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+/*===========================*/
+
+/*===========================*/
+img[alt="search"] {
+  width: 2rem;
+  height: 2rem;
+}
+/*===========================*/
+
+/*===========================
+|     Font-Family          */
+/*===========================*/
+
+/* Targeted MOVIS h1 element */
+.brand {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0.8rem;
+}
+
+/*Targeted input box */
+#input-box {
+  border-radius: 0.7rem;
+  width: 15rem;
+  height: 1.3rem;
+}
+
+/* ============================= 
+|      Media Queries           |
+===============================*/
+
+/* Extra small devices (phones, 0px–479px) */
+@media (max-width: 479px) {
+  .nav-element {
+    display: none;
+  }
+
+  img[alt="home"],
+  img[alt="movies"],
+  img[alt="tvshow"],
+  img[alt="dropdown"] {
+    display: none;
+  }
+
+  img[alt="search"] {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  img[alt="genre"],
+  img[alt="default"] {
+    display: none;
+  }
+
+  #input-box {
+    width: 6rem;
+  }
+
+  /* Targeted three dots */
+  .three-dot {
+    box-shadow: none;
+    border: none;
+    background-color: white;
+  }
+}
+
+/* Small devices (phones, 480px–767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .brand {
+    font-size: 1rem;
+  }
+
+  img[alt="home"],
+  img[alt="movies"],
+  img[alt="tvshow"],
+  img[alt="dropdown"] {
+    display: none;
+  }
+
+  img[alt="genre"] {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  img[alt="search"],
+  img[alt="default"] {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  #input-box {
+    display: none;
+  }
+
+  .nav-element {
+    font-size: 1rem;
+  }
+
+  /*Hide the three dots for bigger displays */
+  img[alt="three-dot"],
+  .three-dot {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .brand {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  img[alt="home"] {
+    width: 1.9rem;
+    height: 1.9rem;
+    padding-right: 0.5rem;
+  }
+  img[alt="movies"] {
+    width: 1.9rem;
+    height: 1.9rem;
+    padding-right: 0.5rem;
+  }
+  img[alt="tvshow"] {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+  img[alt="dropdown"] {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  img[alt="genre"] {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  img[alt="search"] {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  /*Hide the three dots for bigger displays */
+  img[alt="three-dot"],
+  .three-dot {
+    display: none;
+  }
+
+  .home {
+    font-size: 1.2rem;
+  }
+
+  .movies {
+    font-size: 1.2rem;
+  }
+
+  .tvshow {
+    font-size: 1rem;
+  }
+
+  .my-stuff {
+    font-size: 1rem;
+  }
+
+  .nav-element {
+    padding-left: 0;
+  }
+
+  #input-box {
+    display: none;
+  }
+}
+
+/* Large devices (laptops, 1024px–1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /*Hide the three dots for bigger displays */
+  img[alt="three-dot"],
+  .three-dot {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  /*Hide the three dots for bigger displays */
+  img[alt="three-dot"],
+  .three-dot {
+    display: none;
+  }
+}
+
+
