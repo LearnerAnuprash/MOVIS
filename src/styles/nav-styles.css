@@ -20,10 +20,12 @@ a {
 .nav-bar-itself {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(253, 253, 253);
   font-size: 1.3rem;
   font-family: Helvetica, sans-serif;
   width: 100%;
+  position: relative;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Targeted each individual (img+text) for aligning text vertically to images  */
@@ -106,6 +108,9 @@ img[alt="search"] {
   font-weight: 400;
   font-style: normal;
   margin-top: 0.8rem;
+  -webkit-text-stroke-width: 0.2rem;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: rgb(206, 229, 248);
 }
 
 /*Targeted input box */
@@ -273,5 +278,3 @@ img[alt="search"] {
     display: none;
   }
 }
-
-
