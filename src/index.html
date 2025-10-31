@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Linking stylesheets-->
     <link rel="stylesheet" href="./styles/nav-styles.css" />
-    <link rel="stylesheet" href="./styles/slider-dots.css" />
-
+    <link rel="stylesheet" href="./styles/slider-styles.css" />
+    <link rel="stylesheet" href="./styles/nav-hover-styles.css" />
     <!-- Linking font -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -103,21 +103,52 @@
         |                   MAIN BODY                    |
         ===================================================-->
     <section class="slider-section">
-      <div class="slider-container">
-        <div class="slider">
+      <div class="slider">
+        <div class="slide-group">
           <img src="../assets/slide-1.jpeg" id="slide-1" alt="movie-1" />
-          <img src="../assets/slide-2.jpeg" id="slide-2" alt="movie-2" />
-          <img src="../assets/slide-3.jpeg" id="slide-3" alt="movie-3" />
+          <a href="https://www.imdb.com/title/tt33996113/">
+            <img
+              src="../assets/slide-1-logo.png"
+              alt="slide-1-logo"
+              id="slide-1-logo"
+            />
+          </a>
         </div>
-
-        <div class="slider-logo"><img</div>
-
-        <div class="slider-nav">
-          <a href="#slide-1"></a>
-          <a href="#slide-2"></a>
-          <a href="#slide-3"></a>
+        <div class="slide-group">
+          <img src="../assets/slide-2.jpeg" id="slide-2" alt="movie-2" />
+          <a href="https://www.imdb.com/title/tt31186865/">
+            <img
+              src="../assets/slide-2-logo.png"
+              alt="slide-2-logo"
+              id="slide-2-logo"
+            />
+          </a>
+        </div>
+        <div class="slide-group">
+          <img src="../assets/slide-3.jpeg" id="slide-3" alt="movie-3" />
+          <a href="https://www.imdb.com/title/tt23149780/?ref_=fn_all_ttl_1">
+            <img
+              src="../assets/slide-3-logo.png"
+              alt="slide-3-logo"
+              id="slide-3-logo"
+            />
+          </a>
         </div>
       </div>
+
+      <div class="slider-nav">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+      </div>
+
+      <a
+        href="https://www.youtube.com/watch?v=fdWnfzsx-ks&list=RDfdWnfzsx-ks&start_radio=1"
+        class="trailer-anchor"
+      >
+        <img src="../assets/white-play.png" alt="white-play" />
+        <p class="trailer-text">Watch Trailer</p>
+      </a>
     </section>
 
     <script src="./main.js"></script>

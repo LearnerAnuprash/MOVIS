@@ -1,0 +1,118 @@
+.slider img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin-top: -4rem;
+  position: relative;
+  scroll-behavior: smooth;
+  z-index: 9; /* goes under nav bar */
+  width: 100%;
+
+  /* Hide the scroll bar for :the browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.slider-nav a {
+  width: 1vw;
+  height: 1vw;
+  display: inline-block;
+  /* ^ This property makes the dots appear without text inside of the anchor tags */
+
+  background-color: rgba(76, 76, 76, 0.889);
+  border-radius: 50%;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.slider-nav a:hover {
+  background-color: white;
+}
+
+.slider-nav {
+  display: flex;
+  margin-top: -1.3rem;
+  position: relative;
+  z-index: 12;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.slider::-webkit-scrollbar {
+  /* Hides the scroll bar for the following browsers */
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.slider-nav a.active {
+  background-color: white;
+  transform: scale(1.3);
+}
+
+/* For the added logo */
+
+.slide-group {
+  flex-shrink: 0;
+  position: relative;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+#slide-1-logo,
+#slide-2-logo,
+#slide-3-logo {
+  width: 9vw;
+  height: auto;
+  position: absolute; /* absolute inside slide-group */
+  top: 5rem; /* place above the image */
+  left: 49%; /* horizontal center */
+  transform: translateX(-50%); /* perfect centering */
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slider-section {
+  position: relative;
+}
+
+.trailer-anchor {
+  position: absolute;
+  top: 89%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 0.8rem;
+  background-color: rgba(91, 90, 88, 0.943);
+  z-index: 20;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.trailer-anchor:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  background-color: rgba(255, 255, 255, 0.902);
+  color: black;
+  transition: transform 0.3s ease-out;
+}
+
+img[alt="white-play"] {
+  width: 2vw;
+}
