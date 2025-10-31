@@ -120,6 +120,69 @@ img[alt="search"] {
   height: 1.3rem;
 }
 
+/*Hover effects and other effects*/
+.home,
+.movies,
+.tvshow,
+.my-stuff {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 1rem;
+  height: 2.5rem;
+}
+
+.home:hover,
+.movies:hover,
+.tvshow:hover,
+.my-stuff:hover {
+  transform: scale(0.93);
+  background-color: rgba(255, 255, 255, 0.676);
+
+  img[alt="tvshow"],
+  img[alt="movies"],
+  img[alt="home"],
+  img[alt="dropdown"] {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+  }
+}
+
+.nav-element {
+  padding-right: 0.3rem;
+}
+
+.element-container:nth-child(n + 2):nth-child(-n + 5) {
+  margin-top: 5px;
+}
+
+.search-container-button:hover {
+  cursor: pointer;
+}
+
+.trailer-anchor {
+  transition: opacity 0.3s ease;
+}
+
+.trailer-anchor.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+img[alt="genre"]:hover {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+img[alt="default"]:hover {
+  box-sizing: border-box;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  transition: border 0.3s ease;
+}
+
 /* ============================= 
 |      Media Queries           |
 ===============================*/

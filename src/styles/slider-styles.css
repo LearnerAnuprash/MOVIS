@@ -27,7 +27,7 @@
   display: inline-block;
   /* ^ This property makes the dots appear without text inside of the anchor tags */
 
-  background-color: rgba(76, 76, 76, 0.889);
+  background-color: rgba(160, 197, 108, 0.845);
   border-radius: 50%;
   transition: background 0.3s;
   cursor: pointer;
@@ -116,3 +116,18 @@
 img[alt="white-play"] {
   width: 2vw;
 }
+
+.slide-group::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.705) 0%,
+    rgba(0, 0, 0, 0.279) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mix-blend-mode: multiply; /* makes it blend naturally with the image */
+  pointer-events: none;
+}
+
