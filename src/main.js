@@ -5,6 +5,10 @@ const slides = document.querySelectorAll(
 );
 const trailer = document.querySelector(".trailer-anchor"); // trailer anchor tag
 
+let trendingImage1 = document.querySelector(".t-1");
+let trendingImage2 = document.querySelector(".t-2");
+let trendingImage3 = document.querySelector(".t-3");
+
 //URls for trailer
 const paramSundariUrl =
   "https://www.youtube.com/watch?v=fdWnfzsx-ks&list=RDfdWnfzsx-ks&start_radio=1";
@@ -14,11 +18,37 @@ const edenUrl = "https://www.youtube.com/watch?v=2HRB36E5N6g";
 //Default active dot for slide1:
 dots[0].classList.add("active");
 
+let timeout;
+
+//API Call for trending section
+
+const options = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMGQyMTBhNzgzYWI4ZmQwMzVkZjAyNzk1ZDViYmJmZSIsIm5iZiI6MTc2MTk2NTk4OS42MjIwMDAyLCJzdWIiOiI2OTA1NzdhNWZiODcxOTIzMDJlMTI0MjEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.tdwcSCJ1Lyy0mxIk5MMw0MV4MGJ3J97U-Ml6s1InHKc",
+  },
+};
+
+fetch(
+  "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
+  options
+)
+  .then((res) => res.json())
+
+  .then((data) => {
+    trendingImage1.src = `https://image.tmdb.org/t/p/w500${data.results[0].poster_path}`;
+    trendingImage2.src = `https://image.tmdb.org/t/p/w500${data.results[1].poster_path}`;
+    trendingImage3.src = `https://image.tmdb.org/t/p/w500${data.results[2].poster_path}`;
+  })
+
+  .catch((err) => console.error(err));
+
 // Detect which image is most in view
 slider.addEventListener("scroll", () => {
   let index = 0;
   let minDiff = Infinity;
-  let timeout;
 
   //TODO For trailer visuals / UI
   // Hide button immediately
@@ -82,4 +112,3 @@ document.addEventListener("keydown", (e) => {
     goToSlide(index);
   }
 });
-
